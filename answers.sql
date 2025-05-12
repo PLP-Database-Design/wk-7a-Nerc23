@@ -1,11 +1,11 @@
 --Question 1:
-CREATE TABLE ProductDetails (
+CREATE TABLE ProductDetail (
     OrderID INT,
     CustomerName VARCHAR(100),
     Product VARCHAR(50)
 );
 
-INSERT INTO ProductDetails (OrderID, CustomerName, Product) VALUES
+INSERT INTO ProductDetail (OrderID, CustomerName, Product) VALUES
   (101, 'Peter Tosh', 'Laptop'),
   (101, 'Peter Tosh', 'Mouse'),
   (102, 'Jane Smith', 'Tablet'),
