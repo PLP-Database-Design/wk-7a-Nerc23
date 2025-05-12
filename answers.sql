@@ -1,11 +1,11 @@
 --Question 1:
-CREATE TABLE ProductDetail_1NF (
+CREATE TABLE ProductDetails (
     OrderID INT,
     CustomerName VARCHAR(100),
     Product VARCHAR(50)
 );
 
-INSERT INTO ProductDetail_1NF (OrderID, CustomerName, Product) VALUES
+INSERT INTO ProductDetails (OrderID, CustomerName, Product) VALUES
   (101, 'Peter Tosh', 'Laptop'),
   (101, 'Peter Tosh', 'Mouse'),
   (102, 'Jane Smith', 'Tablet'),
@@ -27,14 +27,14 @@ INSERT INTO Orders (OrderID, CustomerName) VALUES
    (103, 'Emily Clark');
 
 
-CREATE TABLE OrderDetails_2NF (
+CREATE TABLE OrderDetails(
     OrderID INT,
     Product VARCHAR(50),
     Quantity INT,
     FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
 );
 
-INSERT INTO OrderDetails_2NF (OrderID, Product, Quantity) VALUES
+INSERT INTO OrderDetails (OrderID, Product, Quantity) VALUES
    (101, 'Laptop', 2),
    (101, 'Mouse', 1),
    (102, 'Tablet', 3),
